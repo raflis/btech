@@ -1,0 +1,2044 @@
+@font-face
+    font-family font-light
+    font-style normal
+    src url(../fonts/NexaLight.otf)
+
+@font-face
+    font-family font-black
+    font-style normal
+    src url(../fonts/NexaBlack.otf)
+
+@font-face
+    font-family font-bold
+    font-style normal
+    src url(../fonts/NexaXBold.otf)
+
+@font-face
+    font-family font-medium
+    font-style normal
+    src url(../fonts/NexaBold.otf)
+
+@font-face
+    font-family font-regular
+    font-style normal
+    src url(../fonts/NexaRegular.otf)
+
+@font-face
+    font-family font-book
+    font-style normal
+    src url(../fonts/NexaBook.otf)
+
+.font-light
+	font-family font-light
+
+.font-black
+	font-family font-black
+
+.font-bold
+	font-family font-bold
+
+.font-medium
+	font-family font-medium
+
+.font-regular
+	font-family font-regular
+
+.font-book
+	font-family font-book
+
+body
+    background rgb(252,252,252)
+    background -moz-linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+    background -webkit-linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+    background linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+    margin 0px
+    font-family font-regular
+    overflow-x hidden
+
+.sec1, .sec2, .sec3, .sec4, .sec5, .sec6, .sec7, .sec8
+    position relative
+
+.loading
+    position fixed
+    width 100vw
+    height 120vh
+    background rgb(0,0,0,1)
+    display flex
+    justify-content center
+    align-items center
+    z-index 999999999
+    top 0
+    #loader
+        border 2px #3F3F3F solid
+        border-radius 50%
+        border-top-color #00AC67
+        width 90px
+        height 90px
+        animation spin 1s linear infinite
+        z-index 9999
+        @keyframes spin
+            from
+                transform translate(0%, -50%) rotate(0deg)
+            to
+                transform translate(0%, -50%) rotate(360deg)
+
+.sec1 //header
+    padding-top 20px
+    padding-bottom 10px
+    position fixed
+    z-index 9999
+    background transparent
+    width 100%
+    transition 1s
+    top 0
+    .cuadro-verde
+        position absolute
+        right 0
+        bottom 0
+    .img-logo
+        width 150px
+    ul.ul-header
+        list-style none
+        display flex
+        justify-content space-around
+        margin-top 1rem
+        padding 0
+        li
+            position relative
+            a
+                font-family font-bold
+                font-weight bold
+                color #323232
+                text-decoration none
+            &:hover
+                &:after
+                    content ''
+                    width 100%
+                    height 2px
+                    background #008B26
+                    position absolute
+                    bottom -4px
+                    left 0
+                    transition all .3s ease
+                    animation width .5s forwards
+            @keyframes width
+                0%
+                    width 10px
+                100%
+                    width 100%
+        li.active
+            &:after
+                content ''
+                width 100%
+                height 2px
+                background #008B26
+                position absolute
+                bottom -4px
+                left 0
+    .nav-mobile
+        display none
+
+#section0 //inicio
+    background rgb(252,252,252)
+    background -moz-linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+    background -webkit-linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+    background linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+    .img-verde
+        position absolute
+        right 0
+        top 0
+        height 100%
+    .logo-b
+        height 30px
+        position absolute
+        right 5%
+        bottom 3%
+        height 55px
+    .texto-izq
+        text-align center
+        margin-top auto
+        margin-bottom auto
+        img
+            height 40px
+            padding-right 80px
+        p
+            text-align left
+            font-family font-bold
+            color #323232
+            font-size 3rem
+            line-height 1.1
+            margin-top 15px
+    .texto-der
+        #carousel-inicio
+            .item
+                .item_
+                    #vimeo
+                        width 700px
+                        height 550px
+                    #youtube
+                        margin-top 78px
+                        width 700px
+                        height 394px
+                    #image
+                        margin-top 78px
+                        width 760px
+                        height 394px
+            .owl-dots
+                position absolute
+                right -10px
+                top 50%
+                display flex
+                flex-direction column
+                .owl-dot
+                    display inline-block
+                    margin 2px -5px
+                    width 12px
+                    height 12px
+                    border-radius 50%
+                    background-color #afafaf
+                .active
+                    background-color #66A33F
+
+#section1 //nosotros
+    background rgb(252,252,252)
+    background -moz-linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+    background -webkit-linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+    background linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+    .title
+        padding-bottom 10px
+        p   
+            position relative
+            color #323232
+            font-family font-medium
+            font-size 1.2rem
+            &:after
+                content ''
+                width 35px
+                height 8px
+                background #008B26
+                border-radius 5px
+                position absolute
+                bottom -6px
+                left 0
+    .content-left
+        margin-top auto
+        margin-bottom auto
+        .video
+            img
+                width 100%
+    .content-right
+        .description
+            padding-right 20%
+            h4
+                color #323232
+                font-family font-black
+                font-size 1.1rem
+            p
+                color #323232
+                font-family font-light
+                font-size 1rem
+                line-height 1.3
+                margin-top 1rem
+            .vermas
+                text-align right
+                img
+                    height 20px
+                    position relative
+                span
+                    position relative
+                    &:hover
+                        &:after
+                            content ''
+                            width 100%
+                            height 1px
+                            background #008B26
+                            position absolute
+                            bottom -10px
+                            left 0
+                            transition all .3s ease
+                            animation width .5s forwards
+                    @keyframes width
+                        0%
+                            width 10px
+                        100%
+                            width 100%
+        #carousel-nosotros
+            .item
+                .habilidades
+                    margin-bottom 30px
+                    margin-top 30px
+                    .tit
+                        display flex
+                        align-items center
+                        span
+                            font-family font-black
+                            font-size 1.2rem
+                            color #323232
+                            padding-right 10px
+                        .divimg
+                            img
+                                height 20px
+                .habilidades-items
+                    padding 0 33px
+                    .divimg
+                        height 52px
+                        text-align center
+                        img
+                            height 100%
+                            width auto
+                            margin auto
+                    .texto
+                        text-align center
+                        p
+                            font-family font-light
+                            color #323232
+                            font-size .9rem
+                            line-height 1
+                            margin-top 1rem
+                .habilidades-cobertura
+                    margin-top 20px
+                    .tit
+                        h3
+                            font-family font-medium
+                            color #323232
+                            font-size 1.1rem
+                        p
+                            font-family font-light
+                            color #008B26
+                            font-size .9rem
+                            line-height 1.2
+                            padding 0 30% 0 0
+            .owl-dots
+                text-align center
+                right 0
+                top 50%
+                .owl-dot
+                    display inline-block
+                    margin 0px 5px
+                    width 12px
+                    height 12px
+                    border-radius 50%
+                    background-color #323232
+                .active
+                    background-color #66A33F
+            .owl-nav
+                display inherit !important
+                .owl-prev
+                    position absolute
+                    left -6%
+                    top 40%
+                    img
+                        height 26px
+                        opacity 1
+                .owl-next
+                    position absolute
+                    right -6%
+                    top 40%
+                    img
+                        height 26px
+                        opacity 1
+                span
+                    font-size 6rem
+                    color #FFF
+                    font-family font-regular
+
+#section2 //partners
+    background rgb(252,252,252)
+    background -moz-linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+    background -webkit-linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+    background linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+    ::-webkit-scrollbar
+        width .55rem
+    ::-webkit-scrollbar-track
+        background inherit
+    ::-webkit-scrollbar-thumb
+        border-radius 10rem
+        border-width 0.4rem
+        border-style solid
+        background-color rgba(33, 40, 50, 0.2)
+        border-color transparent
+    .fp-slidesNav.fp-bottom
+        ul
+            text-align center
+    .partners-background
+        position absolute
+        right 0
+        top 0
+        height 100%
+    .partnerdiv
+        .tit
+            .partner-tit
+                position relative
+                display flex
+                padding 13px 10px
+                &:after
+                    content ''
+                    width 35px
+                    height 8px
+                    background #323232
+                    border-radius 5px
+                    position absolute
+                    bottom -6px
+                    left 21px
+                .images
+                    background #f3f3f3
+                    display flex
+                    align-items center
+                    padding 15px 10px 14px 16px
+                    box-shadow 0 .5rem 1rem rgba(0,0,0,.20)!important
+                    border-radius 15px
+                    img.part
+                        height auto
+                        width 125px
+                    img.fl
+                        height 20px
+                        width auto
+                        padding-left 12px
+                        cursor pointer
+                .collapse-partners
+                    background #f3f3f3
+                    display none
+                    position absolute
+                    width 184px
+                    top 78%
+                    z-index 1
+                    box-shadow 0 10px 10px 1px rgba(0,0,0,.18)
+                    border-bottom-right-radius 16px
+                    border-bottom-left-radius 16px
+                    max-height 250px
+                    overflow-x auto
+                    transition all 1s ease-in-out
+                    animation-name crecer
+                    animation-duration 1s
+                    animation-direction alternate
+                    animation-fill-mode forwards
+                    @keyframes crecer
+                        0%
+                            height 0px
+                        100%
+                            height 250px
+
+                    .card
+                        background #f3f3f3
+                        border none
+                        border-top-right-radius 0px
+                        border-top-left-radius 0px
+                        border-bottom-right-radius 16px
+                        border-bottom-left-radius 16px
+                        .btn-link
+                            text-decoration none
+                            color #323232
+                            border-bottom 1px solid #000
+                            margin-bottom 20px
+            .partner-detail
+                p
+                    font-family font-light
+                    font-size 1rem
+                    line-height 1.3
+                    padding-right 30%
+                    padding-left 21px
+                    margin-top 30px
+        .carousel-partners-solution
+            .item
+                .tit
+                    position relative
+                    display flex
+                    align-items flex-start
+                    padding-top 10px
+                    .number
+                        p
+                            color #008B26
+                            font-size 4.2rem
+                            margin-bottom 0
+                            line-height .9
+                            font-family font-black
+                    .texto
+                        p
+                            font-family font-black
+                            line-height 1.2
+                            font-size 1.5rem
+                            margin-bottom 0
+                            padding-left 8px
+                .description
+                    p
+                        font-family font-light
+                        font-size 1rem
+                        line-height 1.3
+                        margin-top 20px
+                        padding-left 38px
+                .imagen
+                    padding-left 38px
+                    img
+                        width 80%
+                .btn-conocemas
+                    font-family font-bold
+                    font-size 1rem
+                    color #FFF
+                    background #008B26
+                    padding 2px 12px
+                    border-radius 13px
+                    margin 15px 0 0 38px
+            .owl-nav
+                display inherit !important
+                .owl-prev
+                    position absolute
+                    left 1%
+                    top 57%
+                    img
+                        height 26px
+                        opacity 1
+                .owl-next
+                    position absolute
+                    right 13%
+                    top 57%
+                    img
+                        height 26px
+                        opacity 1
+                span
+                    font-size 6rem
+                    color #FFF
+                    font-family font-regular
+
+#section3 //soluciones
+    background-position center
+    background-size cover
+    background-repeat no-repeat
+    background-image url('../images/soluciones-background.png')
+    .info
+        text-align center
+        padding 0 5%
+        .imagen
+            margin-bottom 20px
+            img
+                height 60px
+        p
+            color #323232
+            font-family font-light
+            font-size 1rem
+            line-height 1.2
+            margin-bottom 45px
+            position relative
+            &:after
+                content ''
+                width 15%
+                height 6px
+                background #008B26
+                border-radius 5px
+                position absolute
+                bottom -25px
+                left 42.5%
+        a.btn-contacto
+            background #008B26
+            color #FFF
+            padding 2px 5px
+            font-family font-bold
+            font-size 1rem
+            border-radius 10px
+    .items
+        .active_item
+            background #008B26 !important
+        .active_p
+            color #FFF !important
+        .img_white
+            display none
+        .item
+            padding 20px 6px
+            background #f2f2f2
+            border-radius 20px
+            word-break break-word
+            margin 12px 8px
+            width 100%
+            transition .5s
+            cursor pointer
+            .imagen
+                text-align center
+                padding-bottom 10px
+                img
+                    height 50px
+            p
+                text-align center
+                font-family font-medium
+                line-height 1.1
+                font-size .7rem
+                color #008B26
+                margin-bottom 0
+
+#section4 //blog
+    background rgb(252,252,252)
+    background -moz-linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+    background -webkit-linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+    background linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+    .row
+        margin-top -150px
+    .title
+        padding-bottom 10px
+        p   
+            position relative
+            color #008B26
+            font-family font-black
+            font-size 3rem
+            &:after
+                content ''
+                width 35px
+                height 8px
+                background #323232
+                border-radius 5px
+                position absolute
+                bottom -6px
+                left 0
+    .carouseldiv
+        position relative
+        .computer-blog
+            position absolute
+            width 70%
+            bottom -70%
+            margin-right auto
+            margin-left auto
+            right 0
+            left 0
+        #carousel-blog
+            .item
+                opacity .2
+                transform scale3d(0.8, 0.8, 1)
+                transition all 0.3s ease-in-out
+                .imagen
+                    position relative
+                    img
+                        width 100%
+                    .titulo
+                        text-decoration none
+                        position absolute
+                        bottom 0
+                        right 0
+                        left 0
+                        color #FFF
+                        font-family font-bold
+                        margin-bottom 0
+                        font-size 1.2rem
+                        line-height 1.1
+                        text-align left
+                        padding 0 18px 15px
+            .owl-item.active.center
+                .item
+                    opacity 1
+                    transform scale3d(1.0, 1.0, 1)
+            .owl-nav
+                display inherit !important
+                .owl-prev
+                    position absolute
+                    left 32%
+                    top 44%
+                    img
+                        height 40px
+                        opacity 1
+                .owl-next
+                    position absolute
+                    right 32%
+                    top 44%
+                    img
+                        height 40px
+                        opacity 1
+                span
+                    font-size 6rem
+                    color #FFF
+                    font-family font-regular
+
+#section5 //contactanos
+    background-position center
+    background-size cover
+    background-repeat no-repeat
+    background-image url('../images/contactanos-background.png')
+    .footer-left
+        display flex
+        align-items flex-end
+        .item
+            text-align center
+            img
+                height 50px
+            h3
+                color #FFF
+                font-family font-bold
+                font-size 1.8rem
+            p
+                color #FFF
+                font-family font-light
+                font-size .8rem
+                line-height 1.2
+        p.txt
+            color #FFF
+            font-family font-light
+            line-height 1.3
+            font-size .9rem
+    .formulario
+        background rgb(255,255,255) !important
+        background -moz-linear-gradient(-90deg, rgba(255,255,255,1) 0.33%, rgba(204,204,204,1) 100%) !important
+        background -webkit-linear-gradient(-90deg, rgba(255,255,255,1) 0.33%, rgba(204,204,204,1) 100%) !important
+        background linear-gradient(-90deg, rgba(255,255,255,1) 0.33%, rgba(204,204,204,1) 100%) !important
+        padding 15px 33px 35px
+        margin 13px
+        border-radius 30px
+        position relative
+        .imagen
+            margin-bottom 15px
+            img
+                width 30px
+        p
+            color #323232
+            font-family font-black
+            font-size 1rem
+            line-height 1.1
+        .form-group
+            margin-bottom 7.5px
+            input, textarea
+                border-radius 11px
+            button.btn-submit
+                border none
+                background transparent
+                position absolute
+                right 10%
+                bottom 33px
+                img
+                    height 40px
+    .footer
+        background #141E21
+        position absolute
+        bottom 0
+        display flex
+        justify-content space-around
+        padding 17px 0
+        .footer-right
+            display flex
+            align-items center
+            img
+                height 25px
+                padding-right 60px
+            .copyright
+                display flex
+                align-items center
+                img
+                    padding 0 12px 0 0
+                    height 23px
+                p
+                    margin-bottom 0
+                    color #FFF
+                    font-family font-light
+                    font-size .8rem
+                    line-height 1.2
+        .redes
+            img.redes_
+                height 25px
+                padding 0 1px
+
+//gracias
+.gracias
+    padding 200px 0 70px
+    .title
+        text-align center
+        h3
+            font-family font-bold
+            font-size 2.8rem
+            color #008b26
+        p
+            font-size 1.2rem
+            color #000
+            font-family font-book
+            line-height 1.3
+
+//footer
+#footer
+    background #141E21
+    display flex
+    justify-content space-around
+    padding 40px 0
+    margin-top 30px
+    .footer
+        display flex
+        justify-content space-around
+    .footer-right
+        display flex
+        align-items center
+        img
+            height 25px
+            padding-right 60px
+        .copyright
+            display flex
+            align-items center
+            img
+                padding 0 12px 0 0
+                height 23px
+            p
+                margin-bottom 0
+                color #FFF
+                font-family font-light
+                font-size .8rem
+                line-height 1.2
+    .redes
+        img.redes_
+            height 33px
+            padding 0 1px
+
+//blog
+.blog
+    margin-top 150px
+    .buscador
+        display flex
+        justify-content space-between
+        padding 0 40px
+        .col-izq
+            .busq
+                .embudo
+                    height 18px
+                    margin-right 10px
+                button
+                    color #323232
+                    font-family font-medium
+                    background #FFF
+                    border none
+                    padding 6px 15px 2px
+                    border-radius 30px
+                    box-shadow 0 .5rem 1rem rgba(0,0,0,.20)
+                    margin 0 10px
+                    img
+                        height 7.5px
+                #tagsCol
+                    width 350px
+                #categoriasCol
+                    width 350px 
+                .collapsing, #categoriasCol
+                    position absolute
+                    z-index 999
+                    margin-left 40px
+                    border-radius 16px
+                    top 37px
+                .collapse, #categoriasCol
+                    position absolute
+                    z-index 999
+                    margin-left 40px
+                    border-radius 16px
+                    top 37px
+                .collapsing, #tagsCol
+                    position absolute
+                    z-index 999
+                    margin-left 190px
+                    border-radius 16px
+                    top 37px
+                .collapse, #tagsCol
+                    position absolute
+                    z-index 999
+                    margin-left 190px
+                    border-radius 16px
+                    top 37px
+                .show
+                    position absolute
+                .card-body
+                    border-radius 15px
+                    border none
+                    display block
+                    padding-bottom .75rem
+                    .btn-link
+                        color #323232
+                        font-family font-light
+                        text-decoration none
+                        padding 4px 7px 0px
+                        border 1px solid #323232
+                        font-size .7rem
+                        border-radius 10px
+                        margin-right 3px
+                        margin-bottom 6px
+                        display inline-block
+         .col-der
+             input[name=name]
+                border none
+                font-family font-light
+                font-size .75rem          
+                background transparent
+                border-bottom 1px solid #000
+                width 300px
+                &:focus-visible
+                    outline none
+            button
+                background none
+                border none
+                img
+                    height 18px
+    .entradas
+        padding 0 30px 30px
+        .result
+            text-align center
+            p
+                margin 30px 0 0
+                font-family font-light
+                font-size .85rem
+                span
+                    font-family font-medium
+        .item
+            padding 20px
+            .item_
+                background #FFF
+                .image
+                    img
+                        width 100%
+                .title
+                    padding 12px 20px 0
+                    a
+                        text-decoration none
+                        p
+                            margin 0
+                            margin-bottom 3px
+                            font-family font-medium
+                            color #323232
+                            font-size 1rem
+                            line-height 1.2
+                    p
+                        font-family font-light
+                        color #323232
+                        font-size .8rem
+                        margin-bottom 2.5rem
+                .detail
+                    padding 0 20px 5px
+                    display flex
+                    align-items center
+                    .logo
+                        img
+                            height 20px
+                            padding 0 5px 3px 0
+                    .author
+                        p
+                            font-family font-light
+                            margin 0
+                            color #323232
+                            font-size .7rem
+                            span
+                                font-family font-black
+                .tags
+                    padding 3px 20px 10px
+                    .btn-tag
+                        color #FFF
+                        background #008B26
+                        border-radius 13px
+                        padding 4px 7px 0px
+                        font-family font-light
+                        font-size .7rem
+                        margin-bottom 4px
+
+.entrada //blog
+    margin-top 150px
+    .main-post
+        .titulo
+            text-align center
+            padding 0 20%
+            h3
+                font-size 2.5rem
+                font-family font-bold
+                line-height 1.1
+            p
+                font-family font-light
+                font-size .8rem
+                margin-bottom 4px
+                span
+                    font-family font-bold
+            a
+                text-decoration none
+                img
+                    height 23px
+        .content
+            padding 40px 0 25px
+            p
+                font-family font-light
+        .image
+            text-align center
+            padding 0 30px
+            img
+                width 100%
+    .relacionados
+        text-align center
+        padding 40px 0 30px
+        h4
+            font-family font-bold
+            font-size 1.5rem
+            position relative
+            &:after
+                content ''
+                width 180px
+                height 5px
+                background #323232
+                position absolute
+                bottom -13px
+                left calc(50% - 90px)
+    .item_relacionado
+        padding 30px 20px 30px
+        .item_
+            background #FFF
+            .image
+                img
+                    width 100%
+            .title
+                padding 12px 20px 0
+                a
+                    text-decoration none
+                    p
+                        margin 0
+                        margin-bottom 3px
+                        font-family font-medium
+                        color #323232
+                        font-size 1rem
+                        line-height 1.2
+                p
+                    font-family font-light
+                    color #323232
+                    font-size .8rem
+                    margin-bottom 2.5rem
+            .detail
+                padding 0 20px 5px
+                display flex
+                align-items center
+                .logo
+                    img
+                        height 20px
+                        padding 0 5px 3px 0
+                .author
+                    p
+                        font-family font-light
+                        margin 0
+                        color #323232
+                        font-size .7rem
+                        span
+                            font-family font-black
+            .tags
+                padding 3px 20px 10px
+                .btn-tag
+                    color #FFF
+                    background #008B26
+                    border-radius 13px
+                    padding 4px 7px 0px
+                    font-family font-light
+                    font-size .7rem
+                    margin-bottom 4px
+
+@media screen and (max-width:768px)
+    #headerT
+        display none !important
+    .fp-tableCell
+        height 100% !important
+        display block !important
+    .sec1
+        padding-top 0px !important
+        padding-bottom 0px !important
+        .cuadro-verde
+            display none
+        .row
+            padding-bottom 10px
+            padding-top 10px
+            .left-menu
+                display flex
+                justify-content left
+                align-items center
+                .img-logo
+                    height 40px
+                    width auto
+                    padding-left 30px
+        ul.ul-header
+            display none
+        .right-menu
+            margin auto
+        .burger0
+            display block
+            cursor pointer
+            color #00AC67
+            .linea1, .linea2, .linea3
+                width 40px
+                height 4px
+                background-color #008B26
+                margin 5px
+                transition all .3s ease
+        .burger
+            position: absolute
+            top 15px
+            right 15px
+            color #00AC67
+            z-index 9999999999999
+            cursor pointer
+            .linea1, .linea2, .linea3
+                width 40px
+                height 4px
+                background-color #000
+                margin 5px
+                transition all .3s ease
+        .toggle1
+            transform rotate(-45deg) translate(-6.5px,6.5px)
+        .toggle2
+            opacity 0
+        .toggle3
+            transform rotate(45deg) translate(-5.5px,-6.5px)
+        .nav-mobile-active
+            transform translateX(0%) !important
+        .nav-mobile
+            display block
+            position fixed
+            top 0
+            left 0
+            background #FFF
+            height 101vh
+            width 100%
+            z-index 9999999999
+            padding 90px 40px 30px 10px
+            transform translateX(-100%)
+            transition transform .3s ease-in
+            .lists
+                flex-direction column
+                height 100%
+                justify-content space-between
+                ul
+                    list-style none
+                    li
+                        padding 11px 0
+                        a
+                            color #253238
+                            font-family font-bold
+                            font-size 1.4em !important
+                        a.active
+                            color #008B26
+                .bottom_
+                    .btn-cerrar
+                        background #008B26
+                        color #FFF
+                        font-size 1rem
+                        border-radius 8px
+                        padding 5px 35px
+                        float right
+                        font-family font-medium
+                    .logomobile
+                        display block
+                        width 70%
+                        margin auto
+                        padding-top 30px
+
+    #section0 //inicio
+        padding-top 120px
+        height auto !important
+        background rgb(252,252,252)
+        background -moz-linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+        background -webkit-linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+        background linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+        .img-verde
+            position absolute
+            right 0
+            top 0
+            height 100%
+        .logo-b
+            height 30px
+            position absolute
+            right 5%
+            bottom 3%
+            height 55px
+        .texto-izq
+            text-align center
+            margin-top auto
+            margin-bottom auto
+            img
+                height 30px
+                padding-right 0px
+            p
+                text-align left
+                font-family font-bold
+                color #323232
+                font-size 1.5rem
+                line-height 1.1
+                margin-top 15px
+                text-align center
+        .texto-der
+            #carousel-inicio
+                .item
+                    .item_
+                        #vimeo
+                            width 100%
+                            height 200px
+                        #youtube
+                            margin-top 0
+                            width 100%
+                            height 200px
+                        #image
+                            margin-top 0
+                            width 100%
+                            height 200px
+                        img
+                            width 100%
+                .owl-dots
+                    position absolute
+                    right unset
+                    top unset
+                    display flex
+                    flex-direction unset
+                    bottom -10px
+                    left 45%
+                    z-index 99999999
+                    .owl-dot
+                        display inline-block
+                        margin 0px 2px
+                        width 12px
+                        height 12px
+                        border-radius 50%
+                        background-color #afafaf
+                    .active
+                        background-color #66A33F
+
+    #section1 //nosotros
+        padding-top 35px
+        height auto !important
+        background rgb(252,252,252)
+        background -moz-linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+        background -webkit-linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+        background linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+        .title
+            padding-bottom 10px
+            p   
+                position relative
+                color #323232
+                font-family font-regular
+                font-size 1.2rem
+                &:after
+                    content ''
+                    width 35px
+                    height 8px
+                    background #008B26
+                    border-radius 5px
+                    position absolute
+                    bottom -6px
+                    left 0
+        .content-left
+            margin-top auto
+            margin-bottom auto
+            .video
+                img
+                    width 100%
+        .content-right
+            .description
+                padding-right 0
+                h4
+                    color #323232
+                    font-family font-medium
+                    font-size 1.1rem
+                p
+                    color #323232
+                    font-family font-book
+                    font-size .9rem
+                    line-height 1.3
+                    margin-top 1rem
+                .vermas
+                    text-align right
+                    img
+                        height 20px
+                        position relative
+                    span
+                        position relative
+                        &:hover
+                            &:after
+                                content ''
+                                width 100%
+                                height 1px
+                                background #008B26
+                                position absolute
+                                bottom -10px
+                                left 0
+                                transition all .3s ease
+                                animation width .5s forwards
+                        @keyframes width
+                            0%
+                                width 10px
+                            100%
+                                width 100%
+            .desktop
+                display none
+        .mobile, #carousel-nosotros2
+            display block
+            .item
+                .habilidades
+                    margin-bottom 30px
+                    margin-top 12px
+                    .tit
+                        display flex
+                        align-items center
+                        span
+                            font-family font-black
+                            font-size 1.2rem
+                            color #323232
+                            padding-right 10px
+                        .divimg
+                            img
+                                height 20px
+                .habilidades-items
+                    padding 0 33px
+                    .divimg
+                        height 52px
+                        text-align center
+                        img
+                            height 100%
+                            width auto
+                            margin auto
+                    .texto
+                        text-align center
+                        p
+                            font-family font-light
+                            color #323232
+                            font-size .9rem
+                            line-height 1
+                            margin-top 1rem
+                .habilidades-cobertura
+                    margin-top 10px
+                    .tit
+                        h3
+                            font-family font-medium
+                            color #323232
+                            font-size 1.1rem
+                        p
+                            font-family font-light
+                            color #008B26
+                            font-size .9rem
+                            line-height 1.2
+                            padding 0 30% 0 0
+            .owl-nav
+                display inherit !important
+                .owl-prev
+                    position absolute
+                    left 0%
+                    top 40%
+                    img
+                        height 26px
+                        opacity 1
+                .owl-next
+                    position absolute
+                    right 0%
+                    top 40%
+                    img
+                        height 26px
+                        opacity 1
+                span
+                    font-size 6rem
+                    color #FFF
+                    font-family font-regular
+
+    #section2 //partners
+        padding-top 35px
+        height auto !important
+        background rgb(252,252,252)
+        background -moz-linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+        background -webkit-linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+        background linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+        ::-webkit-scrollbar
+            width .55rem
+        ::-webkit-scrollbar-track
+            background inherit
+        ::-webkit-scrollbar-thumb
+            border-radius 10rem
+            border-width 0.4rem
+            border-style solid
+            background-color rgba(33, 40, 50, 0.2)
+            border-color transparent
+        .title
+            padding-bottom 17px
+            p   
+                position relative
+                color #323232
+                font-family font-regular
+                font-size 1.2rem
+                &:after
+                    content ''
+                    width 35px
+                    height 8px
+                    background #008B26
+                    border-radius 5px
+                    position absolute
+                    bottom -6px
+                    left 0
+        .fp-slidesNav.fp-bottom
+            bottom 0 !important
+        .fp-slidesNav.fp-bottom
+            ul
+                text-align center
+        .partners-background
+            display none
+        .partnerdiv
+            .tit
+                .partner-tit
+                    position relative
+                    display flex
+                    padding 13px 10px
+                    &:after
+                        content ''
+                        width 35px
+                        height 8px
+                        background #323232
+                        border-radius 5px
+                        position absolute
+                        bottom -6px
+                        left 21px
+                    .images
+                        background #f3f3f3
+                        display flex
+                        align-items center
+                        padding 15px 10px 14px 16px
+                        box-shadow 0 .5rem 1rem rgba(0,0,0,.20)!important
+                        border-radius 15px
+                        img.part
+                            height auto
+                            width 125px
+                        img.fl
+                            height 20px
+                            width auto
+                            padding-left 12px
+                            cursor pointer
+                    .collapse-partners
+                        background #f3f3f3
+                        display none
+                        position absolute
+                        width 183px
+                        top 78%
+                        z-index 1
+                        box-shadow 0 10px 10px 1px rgba(0,0,0,.18)
+                        border-bottom-right-radius 16px
+                        border-bottom-left-radius 16px
+                        max-height 250px
+                        overflow-x auto
+                        transition all 1s ease-in-out
+                        animation-name crecer
+                        animation-duration 1s
+                        animation-direction alternate
+                        animation-fill-mode forwards
+                        z-index 99
+                        @keyframes crecer
+                            0%
+                                height 0px
+                            100%
+                                height 250px
+
+                        .card
+                            background #f3f3f3
+                            border none
+                            border-top-right-radius 0px
+                            border-top-left-radius 0px
+                            border-bottom-right-radius 16px
+                            border-bottom-left-radius 16px
+                            .btn-link
+                                text-decoration none
+                                color #323232
+                                border-bottom 1px solid #000
+                                margin-bottom 20px
+                .partner-detail
+                    p
+                        font-family font-book
+                        font-size .95rem
+                        line-height 1.3
+                        padding 0
+                        margin-top 30px
+            .carousel-partners-solution
+                .item
+                    padding-top 17px
+                    padding-left 15px
+                    margin-bottom 33px
+                    .tit
+                        position relative
+                        display flex
+                        align-items flex-start
+                        padding-top 10px
+                        .number
+                            p
+                                color #008B26
+                                font-size 3.2rem
+                                margin-bottom 0
+                                line-height 1.1
+                                font-family font-black
+                        .texto
+                            p
+                                font-family font-black
+                                line-height 1.2
+                                font-size 1.3rem
+                                margin-bottom 0
+                                padding-left 8px
+                    .description
+                        p
+                            font-family font-book
+                            font-size .95rem
+                            line-height 1.3
+                            margin-top 20px
+                            padding-left 38px
+                    .imagen
+                        padding-left 38px
+                        img
+                            width 80%
+                    .btn-conocemas
+                        font-family font-bold
+                        font-size 1rem
+                        color #FFF
+                        background #008B26
+                        padding 2px 12px
+                        border-radius 13px
+                        margin 15px 0 0 38px
+                .owl-nav
+                    display inherit !important
+                    .owl-prev
+                        position absolute
+                        left 6%
+                        top 57%
+                        img
+                            height 26px
+                            opacity 1
+                    .owl-next
+                        position absolute
+                        right 9%
+                        top 57%
+                        img
+                            height 26px
+                            opacity 1
+                    span
+                        font-size 6rem
+                        color #FFF
+                        font-family font-regular
+
+    #section3 //soluciones
+        padding-top 35px
+        height auto !important
+        background rgb(252,252,252)
+        background -moz-linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+        background -webkit-linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+        background linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+        .title
+            padding-bottom 17px
+            p   
+                position relative
+                color #323232
+                font-family font-regular
+                font-size 1.2rem
+                &:after
+                    content ''
+                    width 35px
+                    height 8px
+                    background #008B26
+                    border-radius 5px
+                    position absolute
+                    bottom -6px
+                    left 0
+        .info
+            text-align center
+            padding 0 5%
+            order 1
+            padding-top 20px
+            .imagen
+                margin-bottom 20px
+                img
+                    height 50px
+            p
+                color #323232
+                font-family font-book
+                font-size .9rem
+                line-height 1.2
+                margin-bottom 30px
+                position relative
+                &:after
+                    content ''
+                    width 15%
+                    height 6px
+                    background #008B26
+                    border-radius 5px
+                    position absolute
+                    bottom -14px
+                    left 42.5%
+            a.btn-contacto
+                background #008B26
+                color #FFF
+                padding 2px 5px
+                font-family font-bold
+                font-size 1rem
+                border-radius 10px
+        .items
+            .row
+                padding 0 15px
+            .active_item
+                background #008B26 !important
+            .active_p
+                color #FFF !important
+            .img_white
+                display none
+            .item
+                padding 15px 6px
+                background #f2f2f2
+                border-radius 20px
+                word-break break-word
+                margin 12px 8px
+                width 100%
+                transition .5s
+                cursor pointer
+                .imagen
+                    text-align center
+                    padding-bottom 10px
+                    img
+                        height 30px
+                p
+                    font-size .8rem
+                    text-align center
+                    font-family font-book
+                    line-height 1.1
+                    font-size .7rem
+                    color #008B26
+                    margin-bottom 0
+
+    #section4 //blog
+        padding-top 35px
+        height auto !important
+        background rgb(252,252,252)
+        background -moz-linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+        background -webkit-linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+        background linear-gradient(90deg, rgba(252,252,252,1) 10%, rgba(250,250,250,1) 36%, rgba(250,250,250,1) 49%, rgba(250,250,250,1) 60%, rgba(252,252,252,1) 96%)
+        .row
+            margin-top unset
+        .title
+            padding-bottom 10px
+            p   
+                position relative
+                color #008B26
+                font-family font-regular
+                font-size 1.2rem
+                &:after
+                    content ''
+                    width 35px
+                    height 8px
+                    background #323232
+                    border-radius 5px
+                    position absolute
+                    bottom -6px
+                    left 0
+        .carouseldiv
+            position relative
+            padding-bottom 100px
+            padding-top 20px
+            .computer-blog
+                position absolute
+                width 100%
+                bottom 33px
+                margin-right auto
+                margin-left auto
+                right 0
+                left 0
+            #carousel-blog
+                .item
+                    opacity .2
+                    transform scale3d(0.8, 0.8, 1)
+                    transition all 0.3s ease-in-out
+                    .imagen
+                        position relative
+                        img
+                            width 80%
+                            margin auto
+                        .titulo
+                            text-decoration none
+                            position absolute
+                            bottom 0
+                            right 0
+                            left 0
+                            color #FFF
+                            font-family font-medium
+                            margin-bottom 0
+                            font-size 1rem
+                            line-height 1.1
+                            text-align left
+                            padding 0 14% 15px
+                .owl-item.active.center
+                    .item
+                        opacity 1
+                        transform scale3d(1.0, 1.0, 1)
+                .owl-nav
+                    display inherit !important
+                    .owl-prev
+                        position absolute
+                        left 0%
+                        top 44%
+                        img
+                            height 30px
+                            opacity 1
+                    .owl-next
+                        position absolute
+                        right 0%
+                        top 44%
+                        img
+                            height 30px
+                            opacity 1
+                    span
+                        font-size 6rem
+                        color #FFF
+                        font-family font-regular
+
+    #section5 //contactanos
+        height auto !important
+        background-position top
+        background-size 120%
+        background-repeat no-repeat
+        background-image url('../images/contactanos-background.png')
+        background-color #000 !important
+        .footer-left
+            display flex
+            align-items flex-end
+            .row
+                padding-top 150px
+            .item
+                text-align center
+                img
+                    height 40px
+                h3
+                    color #FFF
+                    font-family font-bold
+                    font-size 1.4rem
+                p
+                    color #FFF
+                    font-family font-book
+                    font-size .9rem
+                    line-height 1.2
+            p.txt
+                padding-top 20px
+                color #FFF
+                font-family font-book
+                line-height 1.3
+                font-size .9rem
+        .formulario
+            background rgb(255,255,255) !important
+            background -moz-linear-gradient(-90deg, rgba(255,255,255,1) 0.33%, rgba(204,204,204,1) 100%) !important
+            background -webkit-linear-gradient(-90deg, rgba(255,255,255,1) 0.33%, rgba(204,204,204,1) 100%) !important
+            background linear-gradient(-90deg, rgba(255,255,255,1) 0.33%, rgba(204,204,204,1) 100%) !important
+            padding 15px 18px 35px
+            margin 13px
+            border-radius 30px
+            position relative
+            .imagen
+                margin-bottom 15px
+                img
+                    width 30px
+            p
+                color #323232
+                font-family font-bold
+                font-size 1rem
+                line-height 1.1
+            .form-group
+                margin-bottom 7.5px
+                input, textarea
+                    border-radius 11px
+                button.btn-submit
+                    border none
+                    background transparent
+                    position absolute
+                    right 10%
+                    bottom 23px
+                    img
+                        height 40px
+        .footer
+            background #141E21
+            position relative
+            bottom 0
+            display flex
+            justify-content space-around
+            padding 30px 15px
+            flex-direction column
+            .footer-right
+                display flex
+                align-items center
+                flex-direction column
+                .imagen
+                    width 100%
+                    padding-bottom 35px
+                img
+                    height 40px
+                    padding-right 60px
+                .copyright
+                    width 100%
+                    padding-bottom 27px
+                    display flex
+                    align-items center
+                    
+                    img
+                        padding 0 12px 0 0
+                        height 23px
+                    p
+                        margin-bottom 0
+                        color #FFF
+                        font-family font-light
+                        font-size .8rem
+                        line-height 1.2
+            .redes
+                img.redes_
+                    height 40px
+                    padding 0 10px 0 0
+
+    .blog
+        margin-top 90px
+        .buscador
+            display flex
+            justify-content space-between
+            padding 0 15px
+            align-items center
+            .col-izq
+                .busq
+                    .embudo
+                        height 18px
+                        margin-right 1px
+                    button
+                        color #323232
+                        font-family font-medium
+                        background #FFF
+                        border none
+                        padding 6px 15px 2px
+                        border-radius 30px
+                        box-shadow 0 .5rem 1rem rgba(0,0,0,.20)
+                        margin 0 2px
+                        img
+                            height 7.5px
+                    #tagsCol
+                        width 180px
+                    #categoriasCol
+                        width 200px 
+                    .collapsing, #categoriasCol
+                        position absolute
+                        z-index 999
+                        margin-left 24px
+                        border-radius 16px
+                        top 37px
+                    .collapse, #categoriasCol
+                        position absolute
+                        z-index 999
+                        margin-left 24px
+                        border-radius 16px
+                        top 37px
+                    .collapsing, #tagsCol
+                        position absolute
+                        z-index 999
+                        margin-left 150px
+                        border-radius 16px
+                        top 37px
+                    .collapse, #tagsCol
+                        position absolute
+                        z-index 999
+                        margin-left 150px
+                        border-radius 16px
+                        top 37px
+                    .show
+                        position absolute
+                    .card-body
+                        border-radius 15px
+                        border none
+                        display block
+                        padding-bottom .75rem
+                        .btn-link
+                            color #323232
+                            font-family font-light
+                            text-decoration none
+                            padding 4px 7px 0px
+                            border 1px solid #323232
+                            font-size .7rem
+                            border-radius 10px
+                            margin-right 3px
+                            margin-bottom 6px
+                            display inline-block
+            .col-der
+                input[name=name]
+                    border none
+                    font-family font-light
+                    font-size .75rem          
+                    background transparent
+                    border-bottom 1px solid #000
+                    width 50px
+                    &:focus-visible
+                        outline none
+                button
+                    background none
+                    border none
+                    img
+                        height 18px
+        .entradas
+            padding 10px 0px 0px
+            margin 0
+            .result
+                text-align center
+                p
+                    margin 30px 0 0
+                    font-family font-light
+                    font-size .85rem
+                    span
+                        font-family font-medium
+            .item
+                padding 20px
+                .item_
+                    background #FFF
+                    .image
+                        img
+                            width 100%
+                    .title
+                        padding 12px 20px 0
+                        a
+                            text-decoration none
+                            p
+                                margin 0
+                                margin-bottom 3px
+                                font-family font-medium
+                                color #323232
+                                font-size 1rem
+                                line-height 1.2
+                        p
+                            font-family font-light
+                            color #323232
+                            font-size .8rem
+                            margin-bottom 2.5rem
+                    .detail
+                        padding 0 20px 5px
+                        display flex
+                        align-items center
+                        .logo
+                            img
+                                height 20px
+                                padding 0 5px 3px 0
+                        .author
+                            p
+                                font-family font-light
+                                margin 0
+                                color #323232
+                                font-size .7rem
+                                span
+                                    font-family font-black
+                    .tags
+                        padding 3px 20px 10px
+                        .btn-tag
+                            color #FFF
+                            background #008B26
+                            border-radius 13px
+                            padding 4px 7px 0px
+                            font-family font-light
+                            font-size .7rem
+                            margin-bottom 4px
+
+    .entrada //blog
+        margin-top 110px
+        .main-post
+            .titulo
+                text-align center
+                padding 0 6%
+                h3
+                    font-size 2rem
+                    font-family font-bold
+                    line-height 1
+                p
+                    font-family font-light
+                    font-size .8rem
+                    margin-bottom 4px
+                    span
+                        font-family font-bold
+                a
+                    text-decoration none
+                    img
+                        height 23px
+            .content
+                padding 20px 0 25px
+                p
+                    font-family font-light
+            .image
+                text-align center
+                padding 0
+                img
+                    width 100%
+        .relacionados
+            text-align center
+            padding 40px 0 30px
+            h4
+                font-family font-bold
+                font-size 1.5rem
+                position relative
+                &:after
+                    content ''
+                    width 180px
+                    height 5px
+                    background #323232
+                    position absolute
+                    bottom -13px
+                    left calc(50% - 90px)
+        .item_relacionado
+            padding 30px 20px 0px
+            .item_
+                background #FFF
+                .image
+                    img
+                        width 100%
+                .title
+                    padding 12px 20px 0
+                    a
+                        text-decoration none
+                        p
+                            margin 0
+                            margin-bottom 3px
+                            font-family font-medium
+                            color #323232
+                            font-size 1rem
+                            line-height 1.2
+                    p
+                        font-family font-light
+                        color #323232
+                        font-size .8rem
+                        margin-bottom 2.5rem
+                .detail
+                    padding 0 20px 5px
+                    display flex
+                    align-items center
+                    .logo
+                        img
+                            height 20px
+                            padding 0 5px 3px 0
+                    .author
+                        p
+                            font-family font-light
+                            margin 0
+                            color #323232
+                            font-size .7rem
+                            span
+                                font-family font-black
+                .tags
+                    padding 3px 20px 10px
+                    .btn-tag
+                        color #FFF
+                        background #008B26
+                        border-radius 13px
+                        padding 4px 7px 0px
+                        font-family font-light
+                        font-size .7rem
+                        margin-bottom 4px
+
+    #footer
+        background #141E21
+        display flex
+        justify-content space-around
+        padding 40px 0
+        margin-top 30px
+        .footer
+            display flex
+            justify-content space-around
+            flex-direction column
+        .footer-right
+            display flex
+            align-items center
+            flex-direction column
+            img
+                height 40px
+                padding-right 60px
+            .logo-footer
+                width 100%
+                padding-bottom 35px
+            .copyright
+                width 100%
+                padding-bottom 27px
+                display flex
+                align-items center
+                img
+                    padding 0 12px 0 0
+                    height 23px
+                p
+                    margin-bottom 0
+                    color #FFF
+                    font-family font-light
+                    font-size .9rem
+                    line-height 1.2
+        .redes
+            img.redes_
+                height 40px
+                padding 0px 10px 0px 0px
